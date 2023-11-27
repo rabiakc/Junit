@@ -28,7 +28,7 @@ public abstract class TestBase {
     protected ExtentTest extentTest;
 
 
-    public void rapor(){
+    public void rapor( String browser, String reportName){
         /*
         1- ExtentReport classindan raporlamayi baslatmasi icin bir object olusturmaliyiz
         2- ExtentHtmlReporter class indan raporlari html formatinda olusturmasi icin bir object olusturmaliyiz
@@ -57,7 +57,7 @@ public abstract class TestBase {
 
         //Bu html raporunda görmek isteyebileceğimiz herhangi bir bilgiyi asagidaki formatta ekleyebilirz
         extentReports.setSystemInfo("Enviroment", "QA");
-        extentReports.setSystemInfo("Bowser", "Chrome");
+        extentReports.setSystemInfo("Browser", browser);
         extentReports.setSystemInfo("Test Automation Engineer", "Ali Can");
 
     }
